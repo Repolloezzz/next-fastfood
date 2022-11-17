@@ -56,6 +56,7 @@ export function Headbar({ height }) {
         <div
           className={`${block} ${style.blockNav}`}
           onClick={MenuActive}
+          style={{ "--alto": `${height}px` }}
         ></div>
         <div className={`centerH ${style.HeadNav} ${menuStyle}`}>
           <ul>

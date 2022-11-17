@@ -8,7 +8,7 @@ import {
   BsFillCaretDownFill,
 } from "react-icons/bs";
 import { requestToBodyStream } from "next/dist/server/body-streams";
-export function Searchbar() {
+export function Searchbar( {height} ) {
   const [type, setType, getType] = useState("");
   const [value, setValue, getValue] = useState("");
   const search = useRef({ type: "", value: "" });
@@ -70,11 +70,11 @@ export function Searchbar() {
   return (
     <>
       <div id="SearchContainer" className={`${style.container} centerV`}>
-        <div className={`${style.searchContainer}`}>
+        <div className={`${style.searchContainer}`} style={{ "--alto": `${height}px` }}>
           <div className={`${style.description}`}>
             <h1>Opciones de cualquier lado para presupuestos ajustados</h1>
           </div>
-          <div className={`${style.bar}`}>
+          <div className={`${style.bar}`} style={{ "--alto": `${height}px` }}>
             <div className={`${style.select}`} onClick={SelectActive}>
               <h3>
                 <p id="SelectHero">Busqueda?</p>

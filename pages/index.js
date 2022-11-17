@@ -19,13 +19,13 @@ export default function Home() {
       setSwHeight(true)
     }
     //console.log(swHeight)
-  }, [Wsize.height, Wsize.width, height]);
+  }, [Wsize.height, Wsize.width, height, swHeight]);
 
   return (
     <>
       <div>
         <Headbar height={height}></Headbar>
-        <Searchbar></Searchbar>
+        <Searchbar height={height}></Searchbar>
         <p>{height}</p>
         <input placeholder="Ingrese algo"></input>
       </div>

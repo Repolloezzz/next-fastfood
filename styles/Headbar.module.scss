@@ -2,18 +2,20 @@
 
 .head {
     width: 100%;
+    display: grid;
+    grid-template-rows: 60% 0% 40%;
     height: calc(var(--alto) * (17 / 100));
     background-color: $m1;
     overflow: hidden;
     border-bottom: 5px solid $orange_3;
     z-index: 3000;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 @media only screen and (max-width: 500px) {
     .head {
-        display: grid;
-        grid-template-rows: 60% 1% 40%;
+        display: block;
         height: calc(var(--alto) * (10 / 100));
         border-bottom: 5px solid $cian_3;
         overflow: unset;
@@ -22,19 +24,17 @@
 .logo {
     display: flex;
     height: 100%;
-    max-height: calc(var(--alto) * (10/100));
     font-family: $font_pacifico;
-    font-size: 1.7vw;
+    font-size: 1.8vw;
     color: $wgb1_3;
     background-color: $m3;
-    //padding: 2.5%;
     user-select: none;
 
     & picture {
         display: flex;
         align-items: center;
-        width: 6vw;
-        height: 100%;
+        width: 6%;
+        min-height: 100%;
         padding: 1%;
 
         & img {
@@ -59,7 +59,7 @@
 }
 .HeadNav {
     width: 100%;
-    height: 40%;
+    height: 100%;
     overflow: hidden;
 
     & ul {
@@ -197,8 +197,9 @@
         position: fixed;
     }
     .blockNav_active {
+        position: absolute;
         width: 100vw;
-        height: 90vh;
+        height: var(--alto);
         opacity: 1;
         backdrop-filter: blur(3px);
         transition: width, opacity .5s;

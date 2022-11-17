@@ -13,6 +13,7 @@
 
 .searchContainer {
     width: 100%;
+    height: calc(var(--alto) * (83 / 100));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,11 +24,11 @@
 @media only screen and (max-width: 500px) {
     .container {
         background-position: center;
-        height: 90vh;
     }
 
     .searchContainer {
         position: relative;
+        height: calc(var(--alto) * (90 / 100));
         top: -5%;
     }
 }
@@ -55,8 +56,7 @@
     align-items: center;
     background-color: $wgb1_1;
     width: 70%;
-    height: 10vh;
-    //max-height: 20vh;
+    height: calc(var(--alto) * (10 / 100));
     border-radius: 30px;
     overflow: hidden;
     padding: .1% .5%;
@@ -92,14 +92,12 @@
 
     & submit {
         user-select: none;
-        min-width: 60px;
-        min-height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         color: $wgb1_3;
-        font-size: 1.5vw;
+        font-size: 2.5vw;
         background: none;
         padding: 1.5%;
         margin: 0;
@@ -123,7 +121,7 @@
 @media only screen and (max-width: 500px) {
     .bar {
         width: 95%;
-        height: 5vh;
+        height: calc(var(--alto) * (5 / 100));
         border-radius: 20px;
         border-width: 3px;
 
@@ -132,10 +130,9 @@
         }
 
         & submit {
-            min-width: 30px;
-            min-height: 30px;
+            height: calc( var(--alto)  * (4 / 100));
+            width: calc( var(--alto)  * (7 / 100));
             padding: 0;
-            font-size: 3.5vw;
 
             & svg {
                 width: 50%;
