@@ -1,0 +1,13 @@
+.centerH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerV {
+    @extend .centerH;
+    flex-direction: column;
+}
+.buttonModule {
+    cursor: pointer;
+    color: red;
+}

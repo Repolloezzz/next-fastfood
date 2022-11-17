@@ -1,0 +1,201 @@
+@import '../styles/abstract/variables';
+
+.head {
+    width: 100%;
+    //height: 17vh;
+    background-color: $m1;
+    overflow: hidden;
+    border-bottom: 5px solid $orange_3;
+    z-index: 3000;
+    position: sticky;
+    top: 0;
+}
+@media only screen and (max-width: 500px) {
+    .head {
+        height: 10vh;
+        border-bottom: 5px solid $cian_3;
+        overflow: unset;
+    }
+}
+.logo {
+    max-height: 10vh;
+    font-family: $font_pacifico;
+    font-size: 1.5vw;
+    color: $wgb1_3;
+    background-color: $m3;
+    padding: 2.5%;
+    user-select: none;
+
+    & picture {
+        width: 6vw;
+        height: 100%;
+        padding: 1%;
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+            transform: rotate(-10deg) translateY(10%);
+            cursor: pointer;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .logo {
+        max-height: 10vh;
+        font-size: 4vw;
+        padding: 0;
+
+        & picture {
+            width: 12vw;
+        }
+    }
+}
+.HeadNav {
+    width: 100%;
+    height: 7vh;
+    overflow: hidden;
+
+    & ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+
+        & li {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            & a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                font-family: $font_patrick;
+                font-size: 1.5vw;
+                color: $wgb3_2;
+                cursor: pointer;
+                transition: background-color .2s;
+
+                & svg {
+                    display: block;
+                    margin-right: 2%;
+                    transition: transform .3s;
+                }
+
+                &:hover {
+                    background-color: $m5;
+                    color: $wgb1_1;
+
+                    & svg {
+                        transform: translateY(-2px) rotate(-20deg);
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .HeadNav {
+        position: absolute;
+        height: 90vh;
+        width: 0;
+        background-color: $m1;
+        transition: width .5s;
+        z-index: 1;
+
+        & ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: none;
+            opacity: 0;
+            transition: opacity .2s;
+
+            & li {
+                width: 100%;
+                height: auto;
+                & a {
+                    display: flex;
+                    width: 100%;
+                    font-size: 5vw;
+                    justify-content: flex-start;
+                    padding: 3% 8%;
+
+                    & svg {
+                        margin-right: 10%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .HamburgerButton {
+        $tamanio: 11vw;
+        background-color: $m4;
+        border-radius: 10px;
+        width: $tamanio;
+        height: $tamanio;
+        position: absolute;
+        top: 20%;
+        left: 4%;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10%;
+        cursor: pointer;
+        transition: all .5s;
+        overflow: hidden;
+
+        & span {
+            width: 100%;
+            height: 15%;
+            background-color: $cian_1;
+            transition: all .5s;
+        }
+    }
+    .HB1 {
+        transform: rotate(135deg);
+        position: absolute;
+        transition: all .5s;
+    }
+    .HB2 {
+        width: 0 !important;
+        transition: all .5s;
+    }
+    .HB3 {
+        transform: rotate(-135deg);
+        position: absolute;
+        transition: all .5s;
+    }
+    .HeadNav_active {
+        width: 65%;
+        transition: width .5s;
+        overflow: hidden;
+        //border-right: 5px solid $orange_3;
+
+        & ul {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+    }
+    .blockNav {
+        width: 0;
+        opacity: 0;
+        position: fixed;
+    }
+    .blockNav_active {
+        width: 100vw;
+        height: 90vh;
+        opacity: 1;
+        backdrop-filter: blur(3px);
+        transition: width, opacity .5s;
+    }
+
+}

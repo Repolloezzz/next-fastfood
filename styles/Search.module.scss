@@ -1,0 +1,251 @@
+@import "./abstract/variables";
+
+.container {
+    background: url(https://img2.goodfon.com/wallpaper/nbig/c/d5/la-pas-boliviya-noch-la-paz.jpg);
+    background-position-y: 70%;
+    background-position-x: center;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: $cian_3, $alpha: .4);
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        background-position: center;
+        height: 90vh;
+    }
+
+    .searchContainer {
+        position: relative;
+        top: -5%;
+    }
+}
+
+.description {
+    width: 50%;
+    font-family: $font_patrick;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 2vw;
+    color: $wgb2_1;
+    text-shadow: 5px 5px rgba($color: #000000, $alpha: .5);
+}
+
+@media only screen and (max-width: 500px) {
+    .description {
+        width: 100%;
+        font-size: 5vw;
+    }
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $wgb1_1;
+    width: 70%;
+    height: 10vh;
+    //max-height: 20vh;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: .1% .5%;
+    border: 5px solid $wgb1_2;
+    border-style: dashed;
+
+    & input {
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 0;
+        background: none;
+        color: $wgb2_2;
+        font-size: 1.5vw;
+        font-family: $font_patrick;
+        padding: 0;
+        margin-left: 2%;
+
+        &::selection {
+            background-color: rgba($color: $m5, $alpha: .5);
+        }
+
+        &:hover {
+            border: 0;
+            outline: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & submit {
+        user-select: none;
+        min-width: 60px;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $wgb1_3;
+        font-size: 1.5vw;
+        background: none;
+        padding: 1.5%;
+        margin: 0;
+        border: 0;
+        transition: background-color .4s;
+        border-radius: 100%;
+
+        & svg {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: $wgb1_3;
+            color: $wgb1_1;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bar {
+        width: 95%;
+        height: 5vh;
+        border-radius: 20px;
+        border-width: 3px;
+
+        & input {
+            font-size: 5vw;
+        }
+
+        & submit {
+            min-width: 30px;
+            min-height: 30px;
+            padding: 0;
+            font-size: 3.5vw;
+
+            & svg {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.select {
+    color: $wgb1_3;
+    font-family: $font_patrick;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    height: 100%;
+    min-width: 20%;
+
+    & h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5vw;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+
+        & p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & svg {
+                display: block;
+            }
+        }
+    }
+
+    & options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 13vw;
+        height: 0;
+        margin-top: 7.5vh;
+        overflow: hidden;
+        //height: 7vw;
+        position: absolute;
+        background: $wgb1_1;
+        border-radius: 0 0 10% 10%;
+        color: $wgb1_3;
+        transition: height .5s;
+
+        & div {
+            opacity: 0;
+            color: $wgb1_3;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 2px 5px;
+            //background-color: rebeccapurple;
+            cursor: pointer;
+            transition: opacity .4s;
+
+            & svg {
+                display: block;
+                margin-right: 2px;
+            }
+
+            &:hover {
+                color: $wgb1_1;
+                background-color: $wgb3_2;
+            }
+        }
+    }
+}
+
+.Options {
+    height: 8vw !important;
+    display: flex;
+    flex-direction: column;
+    transition: height .5s;
+
+    & div {
+        opacity: 1 !important;
+        transition: opacity .4s;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .select {
+        min-width: 30%;
+        font-size: 4vw;
+
+        & h3 {
+            font-size: 4vw;
+        }
+
+        & options {
+            min-width: 24vw;
+            margin-top: 4vh;
+        }
+
+        .Options {
+            height: 20vw !important;
+        }
+    }
+}
