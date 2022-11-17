@@ -15,6 +15,7 @@ export default function Home() {
     <>
       <div>
         <p>{height}</p>
+        <input placeholder="Ingrese algo"></input>
       </div>
     </>
   );
