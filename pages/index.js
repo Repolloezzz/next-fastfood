@@ -10,10 +10,15 @@ export default function Home() {
       setHeight(Wsize.height);
     }
     if (Wsize.width >= height) {
-      setHeight(Wsize.height);
-      navigator.virtualKeyboard.hide();
-//      navigator.virtualKeyboard.show();
+      if (swHeight) {
+        setHeight(Wsize.height);
+        setSwHeight(false)
+      }
     }
+    if(Wsize.width < height) {
+      setSwHeight(true)
+    }
+    //console.log(swHeight)
   }, [Wsize.height, Wsize.width, height]);
 
   return (
