@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
-import {Headbar } from '../components/Headbar'
+import { Headbar } from "../components/Headbar";
 import { Searchbar } from "../components/Search";
 export default function Home() {
   const Wsize = useWindowSize();
   const [height, setHeight] = useState(0);
-  const [swHeight, setSwHeight]= useState(true)
+  const [swHeight, setSwHeight] = useState(true);
   useEffect(() => {
     if (Wsize.height > height) {
       setHeight(Wsize.height);
     }
-    if(Wsize.width > height) {
-      if(swHeight) {
-        setHeight(Wsize.height);
-        setSwHeight(false)
-      }
+    if (Wsize.width >= height) {
+      setHeight(Wsize.height);
       navigator.virtualKeyboard.hide();
-      navigator.virtualKeyboard.show();
+//      navigator.virtualKeyboard.show();
     }
   }, [Wsize.height, Wsize.width, height]);
 
