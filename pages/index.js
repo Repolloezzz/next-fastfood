@@ -10,6 +10,8 @@ export default function Home() {
     }
     if(Wsize.width > height) {
       setHeight(Wsize.height);
+      navigator.virtualKeyboard.hide();
+      navigator.virtualKeyboard.show();
     }
   }, [Wsize.height, Wsize.width, height]);
 

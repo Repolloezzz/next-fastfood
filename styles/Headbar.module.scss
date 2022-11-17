@@ -19,12 +19,13 @@
 }
 .logo {
     display: flex;
+    height: 90%;
     max-height: calc(var(--alto) * (10/100));
     font-family: $font_pacifico;
     font-size: 1.5vw;
     color: $wgb1_3;
     background-color: $m3;
-    padding: 2.5%;
+    //padding: 2.5%;
     user-select: none;
 
     & picture {
