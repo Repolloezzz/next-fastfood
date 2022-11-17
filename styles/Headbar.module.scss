@@ -12,6 +12,8 @@
 }
 @media only screen and (max-width: 500px) {
     .head {
+        display: grid;
+        grid-template-rows: 60% 40%;
         height: calc(var(--alto) * (10 / 100));
         border-bottom: 5px solid $cian_3;
         overflow: unset;
@@ -19,7 +21,7 @@
 }
 .logo {
     display: flex;
-    height: 90%;
+    height: 80%;
     max-height: calc(var(--alto) * (10/100));
     font-family: $font_pacifico;
     font-size: 1.5vw;
