@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <>
       <div>
-        <p>{height}</p>
-        <input placeholder="Ingrese algo"></input>
         <Headbar height={height}></Headbar>
         <Searchbar></Searchbar>
+        <p>{height}</p>
+        <input placeholder="Ingrese algo"></input>
       </div>
     </>
   );
