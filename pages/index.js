@@ -4,12 +4,16 @@ import { Searchbar } from "../components/Search";
 export default function Home() {
   const Wsize = useWindowSize();
   const [height, setHeight] = useState(0);
+  const [swHeight, setSwHeight]= useState(true)
   useEffect(() => {
     if (Wsize.height > height) {
       setHeight(Wsize.height);
     }
     if(Wsize.width > height) {
-      setHeight(Wsize.height);
+      if(swHeight) {
+        setHeight(Wsize.height);
+        setSwHeight(false)
+      }
       navigator.virtualKeyboard.hide();
       navigator.virtualKeyboard.show();
     }
