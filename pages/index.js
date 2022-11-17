@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {Headbar } from '../components/Headbar'
+import { Searchbar } from "../components/Search";
 export default function Home() {
   const Wsize = useWindowSize();
   const [height, setHeight] = useState(0);
@@ -17,7 +18,8 @@ export default function Home() {
       <div>
         <p>{height}</p>
         <input placeholder="Ingrese algo"></input>
-        <Headbar></Headbar>
+        <Headbar height={height}></Headbar>
+        <Searchbar></Searchbar>
       </div>
     </>
   );
