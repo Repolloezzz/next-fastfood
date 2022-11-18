@@ -15,8 +15,8 @@
     width: 100%;
     height: calc(var(--alto) * (83 / 100));
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background: rgba($color: $cian_3, $alpha: .4);
 }
@@ -29,7 +29,7 @@
     .searchContainer {
         position: relative;
         height: calc(var(--alto) * (90 / 100));
-        top: -5%;
+        padding-bottom: 50%;
     }
 }
 
@@ -55,8 +55,8 @@
     justify-content: center;
     align-items: center;
     background-color: $wgb1_1;
-    width: 70%;
-    height: calc(var(--alto) * (10 / 100));
+    width: 80%;
+    height: calc(var(--alto) * (9 / 100));
     border-radius: 30px;
     overflow: hidden;
     padding: .1% .5%;
@@ -99,7 +99,7 @@
         color: $wgb1_3;
         font-size: 2.5vw;
         background: none;
-        padding: 1.5%;
+        padding: 1%;
         margin: 0;
         border: 0;
         transition: background-color .4s;

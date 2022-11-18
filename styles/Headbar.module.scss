@@ -3,7 +3,7 @@
 .head {
     width: 100%;
     display: grid;
-    grid-template-rows: 60% 0% 40%;
+    grid-template-rows: 70% 0% 30%;
     height: calc(var(--alto) * (17 / 100));
     background-color: $m1;
     overflow: hidden;
@@ -25,10 +25,11 @@
     display: flex;
     height: 100%;
     font-family: $font_pacifico;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     color: $wgb1_3;
     background-color: $m3;
     user-select: none;
+    box-sizing: content-box;
 
     & picture {
         display: flex;
